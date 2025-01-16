@@ -1,0 +1,32 @@
+[
+    {
+        "CategoryId": 1,
+        "Category":"Category_Tile1",
+        "Image":"url(./res/card-image1.jpg)"
+    },
+    {
+        "CategoryId": 2,
+        "Category":"Category_Title2",
+        "Image":"url(./res/card-image2.jpg)"
+    },
+    {
+        "CategoryId": 3,
+        "Category":"Category_Title3",
+        "Image":"url(./res/card-image3.jpg)"
+    },
+    {
+        "CategoryId": 4,
+        "Category":"Category_Title4",
+        "Image":"url(./res/card-image4.jpg)"
+    },
+    {
+        "CategoryId": 5,
+        "Category":"Category_Title5",
+        "Image":"url(./res/card-image5.jpg)"
+    },
+    {
+        "CategoryId": 6,
+        "Category":"Category_Title6",
+        "Image":"url(./res/card-image6.jpg)"
+    }
+]

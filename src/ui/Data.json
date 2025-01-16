@@ -1,0 +1,38 @@
+[
+    {
+        "image": "url(./cards-images/card-image1.jpg)",
+        "title": "Public Cloud Developer",
+        "author": "by Alexandru Balan",
+        "desc": "Become an experienced Cloud Developer that designs, builds, optimizes and maintains cloud-based solutions."
+    },
+    {
+        "image": "url(./cards-images/card-image2.jpg)",
+        "title": "DevOPS LP",
+        "author": "by Alexandru Balan",
+        "desc": "DevOPS is not a DLP, but a never-ending process of continual development."
+    },
+    {
+        "image": "url(./cards-images/card-image3.jpg)",
+        "title": "Public Cloud Developer",
+        "author": "by Alexandru Balan",
+        "desc": "DevOPS engineer learning path."
+    },
+    {
+        "image": "url(./cards-images/card-image4.jpg)",
+        "title": "Public Cloud Developer",
+        "author": "by Alexandru Balan",
+        "desc": "Become an experienced Cloud Developer that designs, builds, optimizes and maintains cloud-based solutions."
+    },
+    {
+        "image": "url(./cards-images/card-image5.jpg)",
+        "title": "DevOps LP",
+        "author": "by Alexandru Balan",
+        "desc": "DevOPS is not a DLP, but a never-ending process of continual development."
+    },
+    {
+        "image": "url(./cards-images/card-image6.jpg)",
+        "title": "Public Cloud - DevOps",
+        "author": "by Alexandru Balan",
+        "desc": "DevOPS engineer learning path."
+    }
+]

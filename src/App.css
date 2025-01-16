@@ -1,0 +1,372 @@
+@font-face {
+    font-family: Vodafone;
+    src: url(res/Vodafone.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Vodafone;
+}
+
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 240px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1.5fr 2fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Leftbar Dashboard Dashboard Dashboard Dashboard"
+        "Leftbar Dashboard Dashboard Dashboard Dashboard"
+        "Leftbar Dashboard Dashboard Dashboard Dashboard"
+}
+
+.Leftbar {
+    position: fixed;
+    grid-area: Leftbar;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 16px;
+}
+
+.Menu {
+    padding: 40px 16px 16px 16px;
+    display: grid;
+    gap: 16px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+
+}
+
+.active {
+    font-weight: 800;
+}
+
+.BottomMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 16px;
+}
+
+select {
+    height: 48px;
+    border-radius: 6px;
+    padding: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.Dashboard {
+    padding: 20px 20px 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1.5fr 2fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    align-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+        "Header Header Searchbar User"
+        "Banner Banner Banner right-bar"
+        "Cards Cards Cards right-bar";
+    grid-area: Dashboard;
+    overflow-x: hidden;
+}
+
+.Header {
+    grid-area: Header;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.Searchbar {
+    grid-area: Searchbar;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search {
+    padding: 0px 16px 0px 16px;
+}
+
+.Banner {
+    min-height: 300px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 20px;
+    grid-auto-flow: column;
+    grid-template-areas:
+        "cta image image";
+    grid-area: Banner;
+    overflow: hidden;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    grid-area: cta;
+    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.cta-btn {
+    width: 100%;
+    height: 44px;
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    line-height: 26px;
+    text-align: center;
+}
+
+.cta-btn:hover {
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 242px;
+    height: 48px;
+    border-radius: 6px;
+}
+
+input[type=text]:focus {
+    height: 48px;
+    border-radius: 6px;
+}
+
+.image {
+    grid-area: image;
+    background-image: url(res/mountain.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.User {
+    grid-area: User;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+img {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.right-bar {
+    grid-area: right-bar;
+    border-radius: 6px;
+}
+
+.Cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title title title"
+        "card-row card-row card-row";
+    grid-area: Cards;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    gap: 20px 20px;
+    grid-area: card-row;
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+    height: 140px;
+}
+
+
+.title {
+    grid-area: title;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 40px;
+    white-space: nowrap;
+}
+
+h1 {
+    max-height: 74px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.author {
+    font-size: 18px;
+}
+
+.desc {
+    font-size: 14px;
+    height: 50px;
+}
+
+p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 48px;
+
+    padding: 20px;
+}
+
+.h1 {
+    font-size: 24px;
+}
+
+.h2 {
+    font-size: 18px;
+}
+
+.desc {
+    font-size: 14px;
+    height: 50px;
+}
+
+.end {
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    color: #BD0000;
+}
+
+.btn-link {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+}
+
+.btn-link:hover {
+    cursor: pointer;
+}
+
+.card {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+
+
+html,
+body {
+    background-color: #f2f2f2;
+}
+
+.Leftbar {
+    background-color: white;
+}
+
+.right-bar {
+    background-color: white;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+}
+
+.Item:hover {
+    color: #E60000;
+    cursor: pointer;
+    fill: #E60000;
+}
+
+select {
+    border: 1px solid #0D0D0D;
+    background: url(./res/arrow-down.svg) no-repeat right white;
+    background-origin: content-box;
+}
+
+.search {
+    background: url(./res/search.svg) no-repeat right white;
+    background-origin: content-box;
+}
+
+.banner {
+    background-color: white;
+}
+
+.cta-btn {
+    background-color: #E60000;
+    color: white;
+}
+
+input[type=text] {
+    border: 1px solid #CCCCCC;
+}
+
+input[type=text]:focus {
+    border: 1px solid #CCCCCC;
+}
+
+.user-role {
+    color: #7E7E7E;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+}
