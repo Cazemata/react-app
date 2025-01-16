@@ -1,31 +1,31 @@
 [
     {
-        "id": "1",
+        "categoryId": "1",
         "category": "Category_Tile1",
         "image": "url(./cards-images/card-image1.jpg)"
     },
     {
-        "id": "2",
+        "categoryId": "2",
         "category": "Category_Title2",
         "image": "url(./cards-images/card-image2.jpg)"
     },
     {
-        "id": "3",
+        "categoryId": "3",
         "category": "Category_Title3",
         "image": "url(./cards-images/card-image3.jpg)"
     },
     {
-        "id": "4",
+        "categoryId": "4",
         "category": "Category_Title4",
         "image": "url(./cards-images/card-image4.jpg)"
     },
     {
-        "id": "5",
+        "categoryId": "5",
         "category": "Category_Title5",
         "image": "url(./cards-images/card-image5.jpg)"
     },
     {
-        "id": "6",
+        "categoryId": "6",
         "category": "Category_Title6",
         "image": "url(./cards-images/card-image6.jpg)"
     }

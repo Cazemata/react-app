@@ -1,11 +1,11 @@
 import React from 'react'
 import Arrowright from './icons/Arrowright';
-import Data from './Data.json'
+import Paths from './Paths.json'
 import Categories from './Categories.json'
 
 function getData() {
-    return Data.map((object) => {
-        const matched = Categories.find((element) => element.id === object.id)
+    return Paths.map((object) => {
+        const matched = Categories.find((element) => element.categoryId === object.categoryId)
         return { ...object, ...matched }
     });
 }

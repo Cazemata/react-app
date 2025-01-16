@@ -1,6 +1,7 @@
 import React from 'react'
-import Language from './icons/Language'
-import User from './icons/User'
+import MenuItem from './MenuItem';
+import Language from './icons/Language';
+import User from './icons/User';
 
 export default function BottomMenu() {
   return (
@@ -10,14 +11,8 @@ export default function BottomMenu() {
         <option value="light">Light</option>
         <option value="dark">Dark</option>
       </select>
-      <div className="item">
-        <Language />
-        Language
-      </div>
-      <div className="item">
-        <User />
-        Logout
-      </div>
+      <MenuItem Text="Language" Icon={<Language />} />
+      <MenuItem Text="Logout" Icon={<User />} />
     </div>
   )
 }

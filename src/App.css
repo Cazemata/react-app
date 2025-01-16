@@ -42,7 +42,7 @@ body {
     gap: 16px;
 }
 
-.item {
+.Item {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -124,6 +124,7 @@ select {
         "cta image image";
     grid-area: Banner;
     overflow: hidden;
+    background-color: white;
 }
 
 .cta {
