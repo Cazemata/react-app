@@ -14,7 +14,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 240px 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 1.5fr 2fr;
+    grid-template-rows: 50px 1fr 2fr;
     gap: 20px 20px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -52,6 +52,7 @@ body {
 
 .active {
     font-weight: 800;
+    color: #BD0000;
 }
 
 .BottomMenu {
@@ -79,7 +80,7 @@ select {
     padding: 20px 20px 20px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 1.5fr 2fr;
+    grid-template-rows: 50px 1fr 2fr;
     gap: 20px 20px;
     grid-auto-flow: row;
     justify-content: stretch;
@@ -263,8 +264,6 @@ p {
     text-overflow: ellipsis;
     overflow: hidden;
     max-height: 48px;
-
-    padding: 20px;
 }
 
 .h1 {
