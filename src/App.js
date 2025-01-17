@@ -6,7 +6,6 @@ import Dashboard from './ui/Dashboard';
 function App() {
   return (
     <div className="wrapper">
-      {/* <Script /> */}
       <Leftbar />
       <Dashboard />
     </div>

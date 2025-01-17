@@ -3,16 +3,16 @@ import Header from './Header'
 import Searchbar from './Searchbar'
 import Banner from './Banner'
 import User from './User'
-import Cards from './Cards'
+import PathCards from './PathCards'
 
 export default function Dashboard() {
   return (
     <div className="Dashboard">
-      <Header />
+      <Header Text="Dashboard" />
       <Searchbar />
       <Banner />
       <User />
-      <Cards />
+      <PathCards Title="Recently Added" />
     </div>
   )
 }

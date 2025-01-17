@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Header() {
+export default function Header({ Text }) {
     return (
-        <div className="Header">Dashboard</div>
+        <div className="Header">
+            {Text}
+        </div>
     )
 }
