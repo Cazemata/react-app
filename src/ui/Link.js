@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Link({ Class, Text, Icon }) {
+export default function Link({ className, Text, Icon }) {
     return (
-        <div className={Class}>
+        <div className={className}>
             {Text}
             {Icon}
         </div>

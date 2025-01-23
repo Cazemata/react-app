@@ -19,7 +19,7 @@ export default function PathCards({ Title }) {
                 <h6>
                     {Title}
                 </h6>
-                <Link Text="See All" Class="Item author" Icon={<Arrowright />} />
+                <Link Text="See All" className="Item author" Icon={<Arrowright />} />
             </div>
             <div className="card-row">
                 {getData().map(card => <Card key={card.id} data={card} />)}

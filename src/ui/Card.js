@@ -11,7 +11,7 @@ export default function Card({ data: { image, title, author, desc } }) {
                 <div className="author">{author}</div>
                 <div className="desc"><p>{desc}</p></div>
                 <div className="end h2">
-                    <Link Text="Get Started" Class="btn-link" Icon={<Arrowright />} />
+                    <Link Text="Get Started" className="btn-link" Icon={<Arrowright />} />
                 </div>
             </div>
         </div>

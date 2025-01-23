@@ -3,7 +3,7 @@ import React from 'react'
 export default function Language() {
     return (
         <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_462_4120)">
+            <g clipPath="url(#clip0_462_4120)">
                 <rect y="1" width="24" height="24" rx="12" fill="white" />
                 <path
                     d="M12 25C18.6274 25 24 19.6274 24 13C24 6.37258 18.6274 1 12 1C5.37258 1 0 6.37258 0 13C0 19.6274 5.37258 25 12 25Z"

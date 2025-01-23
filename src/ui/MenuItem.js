@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export default function MenuItem({ Icon, Text }) {
-    const [click, setClick] = useState(false);
+export default function MenuItem({ Icon, Text, isActive, onClick }) {
     return (
-        <div className={`Item ${click ? "active" : ""}`}
-            onClick={() => setClick(true)}
+        <div
+            className={`Item ${isActive ? 'active' : ''}`}
+            onClick={onClick}
         >
             {Icon}
             {Text}

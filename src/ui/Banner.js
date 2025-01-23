@@ -11,7 +11,7 @@ export default function Banner() {
                             Choose your path and let's get started!</p>
                     </div>
                 </div>
-                <div><input type="button" class="cta-btn" value="CTA" /></div>
+                <div><input type="button" className="cta-btn" value="CTA" /></div>
             </div>
             <div className="image"></div>
         </div>
