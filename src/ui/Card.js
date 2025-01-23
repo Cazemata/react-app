@@ -2,7 +2,7 @@ import React from 'react'
 import Link from './Link'
 import Arrowright from './icons/Arrowright'
 
-export default function Card({ image, title, author, desc }) {
+export default function Card({ data: { image, title, author, desc } }) {
     return (
         <div className="card">
             <div className="img" style={{ backgroundImage: image }}></div>
