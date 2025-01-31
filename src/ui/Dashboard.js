@@ -17,31 +17,62 @@ function getData() {
 
 export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState(''); // State for search input
-  const [filteredCards, setFilteredCards] = useState(getData()); // State for filtered cards
+  // const [filteredCards, setFilteredCards] = useState(getData()); // State for filtered cards
+  const [allCards] = useState(getData()); // State for filtered cards
+  const [filteredCards, setFilteredCards] = useState(); // State for filtered cards
 
-  // Handle the search input and filter cards
+
+
   const handleSearch = (query) => {
     setSearchQuery(query); // Update search query
 
     // Filter cards based on search query (matches at the beginning of words)
-    const filtered = getData().filter((card) => {
-      const { title, author } = card;
-      const queryLower = query.toLowerCase();
+    const filtered = allCards.filter((card) => {
+      return card.title.toLocaleLowerCase().includes(query) ||
+        card.author.toLocaleLowerCase().includes(query)
 
-      // Use regex to match the beginning of words
-      const startsWithQuery = (text) => {
-        const regex = new RegExp(`\\b${queryLower}`, 'i'); // Match at the beginning of each word (case-insensitive)
-        return regex.test(text.toLowerCase());
-      };
 
-      return (
-        startsWithQuery(title) ||
-        startsWithQuery(author)
-      );
+      // const { title, author } = card;
+      // const queryLower = query.toLowerCase();
+
+      // // Use regex to match the beginning of words
+      // const startsWithQuery = (text) => {
+      //   const regex = new RegExp(`\\b${queryLower}`, 'i'); // Match at the beginning of each word (case-insensitive)
+      //   return regex.test(text.toLowerCase());
+      // };
+
+      // return (
+      //   startsWithQuery(title) ||
+      //   startsWithQuery(author)
+      // );
     });
 
     setFilteredCards(filtered); // Set filtered cards
   };
+
+  // Handle the search input and filter cards
+  // const handleSearch = (query) => {
+  //   setSearchQuery(query); // Update search query
+
+  //   // Filter cards based on search query (matches at the beginning of words)
+  //   const filtered = getData().filter((card) => {
+  //     const { title, author } = card;
+  //     const queryLower = query.toLowerCase();
+
+  //     // Use regex to match the beginning of words
+  //     const startsWithQuery = (text) => {
+  //       const regex = new RegExp(`\\b${queryLower}`, 'i'); // Match at the beginning of each word (case-insensitive)
+  //       return regex.test(text.toLowerCase());
+  //     };
+
+  //     return (
+  //       startsWithQuery(title) ||
+  //       startsWithQuery(author)
+  //     );
+  //   });
+
+  //   setFilteredCards(filtered); // Set filtered cards
+  // };
 
   return (
     <div className="Dashboard">
