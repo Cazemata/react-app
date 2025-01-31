@@ -1,9 +1,9 @@
-import React from 'react'
-import Menu from './Menu'
-import BottomMenu from './BottomMenu'
-import Logo from './icons/Logo'
+import React from 'react';
+import Menu from './Menu';
+import BottomMenu from './BottomMenu';
+import Logo from './icons/Logo';
 
-export default function Leftbar() {
+export default function Leftbar({ onThemeChange }) {
   return (
     <div className="Leftbar">
       <div className="top-menu">
@@ -12,7 +12,7 @@ export default function Leftbar() {
         </div>
         <Menu />
       </div>
-      <BottomMenu />
+      <BottomMenu onThemeChange={onThemeChange} />
     </div>
-  )
+  );
 }
