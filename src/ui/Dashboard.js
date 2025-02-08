@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import Searchbar from './Searchbar';
 import Banner from './Banner';
@@ -7,7 +7,6 @@ import PathCards from './PathCards';
 import Paths from './Paths.json';
 import Categories from './Categories.json';
 
-// Fetch data from Paths and Categories
 function getData() {
   return Paths.map((object) => {
     const matched = Categories.find((element) => element.categoryId === object.categoryId);
@@ -15,70 +14,37 @@ function getData() {
   });
 }
 
+const apiCall = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(getData());
+  }, 500);
+});
+
 export default function Dashboard() {
-  const [searchQuery, setSearchQuery] = useState(''); // State for search input
-  // const [filteredCards, setFilteredCards] = useState(getData()); // State for filtered cards
-  const [allCards] = useState(getData()); // State for filtered cards
-  const [filteredCards, setFilteredCards] = useState(); // State for filtered cards
-
-
-
+  const [searchQuery, setSearchQuery] = useState('');
+  const [allCards, setAllCards] = useState([]);
+  const [filteredCards, setFilteredCards] = useState([]);
   const handleSearch = (query) => {
-    setSearchQuery(query); // Update search query
+    setSearchQuery(query);
 
-    // Filter cards based on search query (matches at the beginning of words)
+
     const filtered = allCards.filter((card) => {
-      return card.title.toLocaleLowerCase().includes(query) ||
-        card.author.toLocaleLowerCase().includes(query)
-
-
-      // const { title, author } = card;
-      // const queryLower = query.toLowerCase();
-
-      // // Use regex to match the beginning of words
-      // const startsWithQuery = (text) => {
-      //   const regex = new RegExp(`\\b${queryLower}`, 'i'); // Match at the beginning of each word (case-insensitive)
-      //   return regex.test(text.toLowerCase());
-      // };
-
-      // return (
-      //   startsWithQuery(title) ||
-      //   startsWithQuery(author)
-      // );
+      return card.title.toLocaleLowerCase().includes(query) || card.author.toLocaleLowerCase().includes(query);
     });
-
-    setFilteredCards(filtered); // Set filtered cards
+    setFilteredCards(filtered);
   };
 
-  // Handle the search input and filter cards
-  // const handleSearch = (query) => {
-  //   setSearchQuery(query); // Update search query
-
-  //   // Filter cards based on search query (matches at the beginning of words)
-  //   const filtered = getData().filter((card) => {
-  //     const { title, author } = card;
-  //     const queryLower = query.toLowerCase();
-
-  //     // Use regex to match the beginning of words
-  //     const startsWithQuery = (text) => {
-  //       const regex = new RegExp(`\\b${queryLower}`, 'i'); // Match at the beginning of each word (case-insensitive)
-  //       return regex.test(text.toLowerCase());
-  //     };
-
-  //     return (
-  //       startsWithQuery(title) ||
-  //       startsWithQuery(author)
-  //     );
-  //   });
-
-  //   setFilteredCards(filtered); // Set filtered cards
-  // };
+  useEffect(() => {
+    apiCall.then(response => {
+      setAllCards(response);
+      setFilteredCards(allCards);
+    })
+  }, [allCards]);
 
   return (
     <div className="Dashboard">
       <Header Text="Dashboard" />
-      {/* Pass the state and handler down as props */}
-      <Searchbar onSearch={handleSearch} value={searchQuery} />
+      <Searchbar onSearch={(handleSearch)} value={searchQuery} />
       <Banner />
       <User />
       <PathCards Title="Recently Added" filteredCards={filteredCards} />

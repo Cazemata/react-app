@@ -11,7 +11,6 @@ export default function PathCards({ Title, filteredCards }) {
                 <Link Text="See All" className="Item author" Icon={<Arrowright />} />
             </div>
             <div className="card-row">
-                {/* Render the filtered cards */}
                 {filteredCards.length > 0 ? (
                     filteredCards.map((card) => <Card key={card.id} data={card} />)
                 ) : (

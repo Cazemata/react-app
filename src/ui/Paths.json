@@ -10,20 +10,20 @@
         "id": "2",
         "categoryId": "2",
         "title": "DevOPS LP",
-        "author": "by Alexandru Balan",
+        "author": "by Ion Ion",
         "desc": "DevOPS is not a DLP, but a never-ending process of continual development."
     },
     {
         "id": "3",
         "categoryId": "3",
-        "title": "Fromt end developer",
-        "author": "by Alexandru Balan",
+        "title": "Front End Developer",
+        "author": "by Elena Farago",
         "desc": "DevOPS engineer learning path."
     },
     {
         "id": "4",
         "categoryId": "4",
-        "title": "Public Cloud Developer",
+        "title": "API Integration",
         "author": "by Alexandru Balan",
         "desc": "Become an experienced Cloud Developer that designs, builds, optimizes and maintains cloud-based solutions."
     },
@@ -31,27 +31,27 @@
         "id": "5",
         "categoryId": "5",
         "title": "DevOps LP",
-        "author": "by Alexandru Balan",
+        "author": "by Ion Ion",
         "desc": "DevOPS is not a DLP, but a never-ending process of continual development."
     },
     {
         "id": "6",
         "categoryId": "6",
-        "title": "Public Cloud - DevOps",
-        "author": "by Alexandru Balan",
+        "title": "React 19",
+        "author": "by Elena Farago",
         "desc": "DevOPS engineer learning path."
     },
     {
         "id": "7",
         "categoryId": "1",
         "title": "Public Cloud - DevOps",
-        "author": "by Alexandru Balan",
+        "author": "by Ion Ion",
         "desc": "DevOPS engineer learning path."
     },
     {
         "id": "8",
         "categoryId": "2",
-        "title": "Public Cloud - DevOps",
+        "title": "Angular Testing",
         "author": "by Alexandru Balan",
         "desc": "DevOPS engineer learning path."
     }
